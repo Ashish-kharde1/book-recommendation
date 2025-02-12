@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4ef3b6e7-f12b-4d5c-9c45-7b3e9c5b55a2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/sentiment-analysis.ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/cover_not_found.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/gradio-dashboard.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -86,7 +87,9 @@
       <workItem from="1739252783096" duration="2550000" />
       <workItem from="1739261021806" duration="4640000" />
       <workItem from="1739273041437" duration="1100000" />
-      <workItem from="1739280214740" duration="13377000" />
+      <workItem from="1739280214740" duration="13808000" />
+      <workItem from="1739343075907" duration="811000" />
+      <workItem from="1739364513450" duration="2243000" />
     </task>
     <servers />
   </component>
