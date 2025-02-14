@@ -18,7 +18,7 @@ books = pd.read_csv("books_with_emotion.csv")
 books["large_thumbnail"] = books["thumbnail"] + "&fife=w800"
 books["large_thumbnail"] = np.where(
     books["large_thumbnail"].isna(),
-    "cover-not-found.jpg",
+    "cover_not_found.jpg",
     books["large_thumbnail"],
 )
 
@@ -107,4 +107,4 @@ with gr.Blocks(theme = gr.themes.Glass()) as dashboard:
 
 
 if __name__ == "__main__":
-    dashboard.launch()
+    dashboard.launch(share=True)
