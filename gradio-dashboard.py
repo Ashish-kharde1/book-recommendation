@@ -12,22 +12,22 @@ import gradio as gr
 from sympy.integrals.meijerint_doc import category
 
 load_dotenv()
-os.environ["GOOGLE_API_KEY"]
+os.environ["GOOGLE_API_KEY"]=os.getenv("GOOGLE_API_KEY")
 
-books=pd.read_csv("books_with_emotion.csv")
-books["large_thumbnail"]=books["thumbnail"] + "&fife=w800"
-books["large_thumbnail"]=np.where(
+books = pd.read_csv("books_with_emotion.csv")
+books["large_thumbnail"] = books["thumbnail"] + "&fife=w800"
+books["large_thumbnail"] = np.where(
     books["large_thumbnail"].isna(),
-    "cover_not_found.jpg",
-    books["large_thumbnail"]
+    "cover-not-found.jpg",
+    books["large_thumbnail"],
 )
 
-loader = TextLoader("tagged_description.txt",encoding="utf-8")
-doc=loader.load()
-text_splitter=CharacterTextSplitter(chunk_size=0,chunk_overlap=0,separator="\n")
-documents=text_splitter.split_documents(doc)
-embeddings=GoogleGenerativeAIEmbeddings(model="models/embedding-001")
-db_books=Chroma.from_documents(documents,embeddings)
+raw_documents = TextLoader("tagged_description.txt",encoding="utf-8").load()
+text_splitter = CharacterTextSplitter(separator="\n", chunk_size=0, chunk_overlap=0)
+documents = text_splitter.split_documents(raw_documents)
+embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
+db_books = Chroma.from_documents(documents, embeddings)
+
 
 def retrieve_semantic_recommendations(
         query: str,
