@@ -1,4 +1,3 @@
-#%%
 import os
 import numpy as np
 import pandas as pd
@@ -105,6 +104,14 @@ with gr.Blocks(theme = gr.themes.Glass()) as dashboard:
                         inputs = [user_query, category_dropdown, tone_dropdown],
                         outputs = output)
 
+    gr.Markdown(
+        """
+        <hr>
+        <footer style="text-align: center; font-size: 14px; color: gray; margin-top: 20px;">
+            Made with ❤️ by <a href="https://github.com/Ashish-kharde1" target="_blank" style="color: #FF4500; text-decoration: none;">Ashish Kharde</a> &copy; 2025
+        </footer>
+        """
+    )
 
 if __name__ == "__main__":
     dashboard.launch(share=True)
