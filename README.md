@@ -1,5 +1,7 @@
 # Semantic Book Recommender
 
+> 🚀 **Live Demo:** [Try the app on Hugging Face Spaces](https://ashish-kharde1-book-recommendation.hf.space/)
+
 A machine learning-powered book recommendation system that suggests books based on natural language descriptions, categories, and emotional tones.
 
 ## Features
